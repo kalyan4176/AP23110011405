@@ -1,6 +1,6 @@
 const axios = require("axios");
 
-const LOG_API = "http://20.207.122.201/evaluation-service/logs";
+const log_api = "http://20.207.122.201/evaluation-service/logs";
 
 async function Log(stack, level, pkg, message) {
   const payload = {
@@ -11,7 +11,7 @@ async function Log(stack, level, pkg, message) {
   };
 
   try {
-    await axios.post(LOG_API, payload);
+    await axios.post(log_api, payload);
   } catch (error) {
     const status = error.response?.status;
 

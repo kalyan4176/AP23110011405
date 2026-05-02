@@ -30,10 +30,9 @@ async function optimizeSchedule(req, res) {
 
   } catch (err) {
     await Log("backend", "fatal", "controller", err.message);
+
     res.status(500).json({ error: "Internal Server Error" });
   }
 }
 
-module.exports = {
-  optimizeSchedule
-};
+module.exports = { optimizeSchedule };

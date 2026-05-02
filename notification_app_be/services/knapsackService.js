@@ -18,7 +18,7 @@ function knapsack(tasks, maxHours) {
       }
     }
   }
-
+  
   let w = maxHours;
   const selected = [];
 
